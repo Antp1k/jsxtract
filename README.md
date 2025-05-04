@@ -1,5 +1,5 @@
 # v1.0.0
-**JSXtract** is a tool used to pull various type of data from JS files that exist within a selected tab. This tool is a great way to get an initial look on how the application has been written and what may exist within the application, but since the values that you gain from this tool are through various regex, it's best to use this to see what to look for more deeply when analyzing the applications JS files.
+**JSXtract** is a tool used to pull various type of data from JS files that exist within a selected tab. This tool is a great way to get an initial look on what may exist within the application. You can use the tool to get some basic data such as urls, endpoints and parameters or get a good initial look of sinks, postmessages and then go deeper from there etc.
 
 ## How it's used
 - First the user should check which domains the JS files of the application are from i.e. netflix uses nflxext.com, in which case you'd place something like "nflx" into the whitelist input (this input is comma separated array i.e. nflx,netflix), which will then get all JS files from sources which include "nflx" in them.
