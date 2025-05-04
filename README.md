@@ -14,22 +14,29 @@
 - Misc. ( These are values of .get() & .set() with some context)
 
 ## The regex used
-urls - `/https?:\/\/[a-zA-Z0-9\.\-_\/\$\{\}:]+/g`
-endpoints - `/(?<=[\"\'])\/[a-zA-Z0-9\-\._\/\$\{\}:]{2,}/g`
-parameters - `/(?<=\?)[a-zA-Z0-9\-_]{2,}(?==)/g`
-Misc. - `/[\(\)\[\]\{\}\w]{0,20}\.[sg]et\([\"\'][^\"\']+[\"\'][^\)]*\)/g`
+urls: `/https?:\/\/[a-zA-Z0-9\.\-_\/\$\{\}:]+/g`
 
-sinks - `/document\.(write(ln)\([^\)]+\)|domain\s?=\s?[^;\)\]\}]{1,300})|\.(innerHTML|outerHTML|insertAdjacentHTML|onevent|srcdoc)\s?[=]\s?[^;]{1,300};|dangerouslySetInnerHTML[=:]\s?\{?[^;\}]{1,300}[;\}]|location\.(host|hostname|href|pathname|search|protocol)\s?=[^;]{1,300};|location\.(assign\(|replace\()[^\)]{1,300}\)|document\.cookie\s?=\s?[^;]{1,300};|(eval(uate)?|execCommand|execScript)\([^\)]+\)|\.(href|src|action)\s?=\s?[^;]{1,300};|FileReader\.(readAsArrayBuffer|readAsBinaryString|readAsDataURL|readAsText|readAsFile|root\.getFile)\([^\)]{1,300}\)/g`
+endpoints: `/(?<=[\"\'])\/[a-zA-Z0-9\-\._\/\$\{\}:]{2,}/g`
 
-postMessages - `/postMessage\(.{1,300}\);|addEventListener\([\'\"]message[\'\"].{1,300}\);/g`
+parameters: `/(?<=\?)[a-zA-Z0-9\-_]{2,}(?==)/g`
+
+Misc.: `/[\(\)\[\]\{\}\w]{0,20}\.[sg]et\([\"\'][^\"\']+[\"\'][^\)]*\)/g`
+
+sinks: `/document\.(write(ln)\([^\)]+\)|domain\s?=\s?[^;\)\]\}]{1,300})|\.(innerHTML|outerHTML|insertAdjacentHTML|onevent|srcdoc)\s?[=]\s?[^;]{1,300};|dangerouslySetInnerHTML[=:]\s?\{?[^;\}]{1,300}[;\}]|location\.(host|hostname|href|pathname|search|protocol)\s?=[^;]{1,300};|location\.(assign\(|replace\()[^\)]{1,300}\)|document\.cookie\s?=\s?[^;]{1,300};|(eval(uate)?|execCommand|execScript)\([^\)]+\)|\.(href|src|action)\s?=\s?[^;]{1,300};|FileReader\.(readAsArrayBuffer|readAsBinaryString|readAsDataURL|readAsText|readAsFile|root\.getFile)\([^\)]{1,300}\)/g`
+
+postMessages: `/postMessage\(.{1,300}\);|addEventListener\([\'\"]message[\'\"].{1,300}\);/g`
 
 ## Installation
 #### Chrome:
 1. Use `git clone https://github.com/Antp1k/jsxtract.git` in your shell
-2. Open `chrome://extensions`
+2. Open `chrome://extensions` in your browser
 3. Enable developer mode
 4. Press load unpacked
 5. Navigate to the jsxtract/chrome directory and select manifest.json
 
 #### Firefox:
-- 
+- The extension will be available in the firefox store at a later date, for now the following instructions will do, however the extension has to be reloaded each time you open firefox.
+1. Use `git clone https://github.com/Antp1k/jsxtract.git` in your shell
+2. Open `about:debugging#/runtime/this-firefox` in your browser
+3. Press `Load Temporary Add-on`
+4. Navigate to the jsxtract/firefox directory and select manifest.json
