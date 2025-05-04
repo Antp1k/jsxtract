@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hiscan</title>
+    <style>
+      body {
+        width: 200px;
+        font-family: Arial, sans-serif;
+        padding: 10px;
+        background-color: #1c1c1c;
+      }
+
+      p, h1, h2, h3, label {
+        color: white;
+      }
+
+      #errors {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>JSXtract</h2>
+    <hr>
+    <label>Whitelist</label>
+    <input type="text" id="whitelist" name="whitelist" placeholder="example,excdn"><br>
+    <button id="start">Start</button>
+    <p id="errors"></p>
+    <script src="popup.js"></script>
+  </body>
+</html>
