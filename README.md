@@ -35,7 +35,8 @@ postMessages: `/postMessage\(.{1,300}\);|addEventListener\([\'\"]message[\'\"].{
 5. Navigate to the jsxtract/chrome directory and select manifest.json
 
 #### Firefox:
-- The extension will be available in the firefox store at a later date, for now the following instructions will do, however the extension has to be reloaded each time you open firefox.
+Either install the extension from `https://addons.mozilla.org/en-US/firefox/addon/jsxtract/`
+or follow the following steps to install the extension as a temporary addon:
 1. Use `git clone https://github.com/Antp1k/jsxtract.git` in your shell
 2. Open `about:debugging#/runtime/this-firefox` in your browser
 3. Press `Load Temporary Add-on`
